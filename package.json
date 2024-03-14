@@ -5,10 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm --filter web run dev",
-    "build": "npm --filter web run build",
-    "start": "npm --filter web run start",
-    "lint": "npm --filter web run lint",
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web run build",
+    "start": "pnpm --filter web run start",
+    "lint": "pnpm --filter web run lint",
     "prepare": "npx husck init",
     "typecheck": "tsc --noEmit"
   },
