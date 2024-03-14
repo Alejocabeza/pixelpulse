@@ -1,0 +1,53 @@
+{
+  "name": "pixelpulse",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm --filter web run dev",
+    "build": "npm --filter web run build",
+    "start": "npm --filter web run start",
+    "lint": "npm --filter web run lint",
+    "prepare": "npx husck init",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Alejandro Cabeza",
+    "url": "https://github.com/Alejocabeza",
+    "email": "alejandrocabeza400@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alejocabeza/pixelpulse.git"
+  },
+  "license": "ISC",
+  "pnpm": {
+    "overrides": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    }
+  },
+  "engines": {
+    "node": ">=16.x",
+    "pnpm": ">=8.x"
+  },
+  "packageManager": "pnpm@8.15.4",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@changesets/get-release-plan": "^4.0.0",
+    "@changesets/types": "^6.0.0",
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "husky": "^9.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "standard": "^17.1.0",
+    "typescript": "^5"
+  }
+}
