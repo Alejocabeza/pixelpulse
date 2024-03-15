@@ -9,7 +9,6 @@
     "build": "pnpm --filter web run build",
     "start": "pnpm --filter web run start",
     "lint": "pnpm --filter web run lint",
-    "prepare": "npx husck init",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
