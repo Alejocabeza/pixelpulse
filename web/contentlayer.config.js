@@ -1,8 +1,8 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 /** @type (import('contentlayer/source-files').ComputedFields) */
 const computedFields = {
@@ -22,15 +22,14 @@ export const Frameworks = defineDocumentType(() => ({
   contentType: 'mdx',
   title: {
     type: 'string',
-    required: true
+    required: false
   },
   description: {
     type: 'string'
   },
-
   author: {
     type: 'string',
-    required: true
+    required: false
   },
   computedFields
 }))
@@ -41,18 +40,14 @@ export const Guide = defineDocumentType(() => ({
   contentType: 'mdx',
   title: {
     type: 'string',
-    required: true
+    required: false
   },
   description: {
     type: 'string'
   },
-  date: {
-    date: 'date',
-    required: false
-  },
   author: {
     type: 'string',
-    required: true
+    required: false
   },
   computedFields
 }))
@@ -63,7 +58,7 @@ export const Component = defineDocumentType(() => ({
   contentType: 'mdx',
   title: {
     type: 'string',
-    required: true
+    required: false
   },
   description: {
     type: 'string',
@@ -71,7 +66,7 @@ export const Component = defineDocumentType(() => ({
   },
   author: {
     type: 'string',
-    required: true
+    required: false
   },
   computedFields
 }))

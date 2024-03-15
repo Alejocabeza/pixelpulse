@@ -1,8 +1,8 @@
-import { GithubIcon } from "@/icons";
-import Link from "next/link";
-import { ChangeTheme } from "../ChangeTheme";
+import { GithubIcon } from '@/icons'
+import Link from 'next/link'
+import { ChangeTheme } from '../ChangeTheme'
 
-export function Navbar() {
+export function Navbar () {
   return (
     <header className="h-[8rem] flex justify-between cursor-default">
       <div className="flex justify-center items-center">
@@ -37,5 +37,5 @@ export function Navbar() {
         <ChangeTheme />
       </div>
     </header>
-  );
+  )
 }

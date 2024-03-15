@@ -1,17 +1,17 @@
 export const navigations = [
   {
-    name: "guide",
+    name: "guides",
     path: null,
     icon: null,
     routes: [
       {
         name: "introduction",
-        path: "/guide/introduction",
+        path: "/guides/introduction",
         icon: null,
       },
       {
         name: "installation",
-        path: "/guide/installation",
+        path: "/guides/installation",
         icon: null,
       },
     ],

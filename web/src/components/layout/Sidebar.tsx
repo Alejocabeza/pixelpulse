@@ -1,5 +1,5 @@
-import { navigations } from "@/lib";
-import Link from "next/link";
+import { navigations } from '@/lib'
+import Link from 'next/link'
 
 export const Sidebar = () => {
   return (
@@ -22,5 +22,5 @@ export const Sidebar = () => {
       </header>
       <footer className="text-[1rem]">Created By: Alejandro Cabeza</footer>
     </aside>
-  );
-};
+  )
+}
