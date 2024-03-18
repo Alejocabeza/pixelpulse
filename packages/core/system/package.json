@@ -1,0 +1,45 @@
+{
+  "name": "pixelui-system",
+  "version": "1.0.0",
+  "description": "This is a system component for pixelui",
+  "main": "index.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alejocabeza/pixelui",
+    "directory": "packages/core/system"
+  },
+  "bugs": {
+    "url": "https://github.com/Alejocabeza/pixelui/issues"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "dev": "pnpm build:fast --watch",
+    "typechecked": "tsc --noEmit",
+    "build:fast": "tsup src",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "keywords": [
+    "core",
+    "system"
+  ],
+  "author": {
+    "name": "Alejocabeza",
+    "url": "https://github.com/Alejocabeza",
+    "email": "alejandrocabeza400@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "clean-package": "^2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}
