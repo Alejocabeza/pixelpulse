@@ -124,7 +124,7 @@ const config: Config = {
       copyright: 'Created by Alejo Cabeza. All rights reserved.',
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
