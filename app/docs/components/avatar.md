@@ -39,14 +39,15 @@ import { Avatar } from "pixelui-avatar";
 <br/>
 
 <div className='flex flex-row gap-[1rem]'>
-    <Avatar size='sm' name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
-    <Avatar size='sm' name='Kola Tioluwani' src='https://bit.ly/tioluwani-kolawole' />
-    <Avatar size='sm' name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
-    <Avatar size='sm' name='Ryan Florence' src='https://bit.ly/ryan-florence' />
-    <Avatar size='sm' name='Prosper Otemuyiwa' src='https://bit.ly/prosper-baba' />
-    <Avatar size='sm' name='Christian Nwamba' src='https://bit.ly/code-beast' />
-    <Avatar size='sm' name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
+    <Avatar name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+    <Avatar name='Kola Tioluwani' src='https://bit.ly/tioluwani-kolawole' />
+    <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
+    <Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence' />
+    <Avatar name='Prosper Otemuyiwa' src='https://bit.ly/prosper-baba' />
+    <Avatar name='Christian Nwamba' src='https://bit.ly/code-beast' />
+    <Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
 </div>
+
 <br/>
 
 ```jsx
@@ -119,18 +120,18 @@ Si al buscar o renderizar la imagen tiene al un error:
 para customizar el manejo de errores:
 
 - El componente recibe un propiedad llamada icon que recibe un elemento de svg
-- Para actualizar el color por defecto puedes usar tailwindcss
+- Para actualizar los estilos de css del componente lo puedes hacer con la propiedad sx, `tailwind` aun no esta soportado
 
 <div className='flex flex-row gap-[1rem]'>
-  <Avatar  icon={<Github/>} />
-  <Avatar className='bg-slate-600' />
+  <Avatar icon={<Github />} bg="#2e2e2e" sx={{color:'white', border: '1px solid orange'}} />
+  <Avatar sx={{backgroundColor: "orange", color: 'white'}} />
 </div>
 
 <br/>
 
 ```jsx
 <div className="flex flex-row gap-[1rem]">
-  <Avatar icon={<Github />} />
-  <Avatar />
+  <Avatar icon={<Github />} bg="#2e2e2e" sx={{color:'white', border: '1px solid orange'}} />
+  <Avatar sx={{backgroundColor: "orange", color: 'white'}} />
 </div>
 ```
