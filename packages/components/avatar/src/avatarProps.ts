@@ -12,7 +12,7 @@ export interface AvatarProps {
   /**
    * the className of the avatar
    */
-  className?: string
+  sx?: {}
   /**
    * the icon of the avatar
    */

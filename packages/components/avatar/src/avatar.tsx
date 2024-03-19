@@ -1,7 +1,8 @@
 'use client'
+import css from '@styled-system/css'
 import { forwardRef } from 'pixelui-system'
 import { memo, useMemo, useState } from 'react'
-import { AvatarProps } from 'src/AvatarProps'
+import { AvatarProps } from 'src/avatarProps'
 import styled from 'styled-components'
 import { AvatarIcon } from './avatarIcon'
 
@@ -15,25 +16,28 @@ const sizes = {
   '2xl': 'width: 8rem; height: 8rem;',
 };
 
-const Container = styled.div<{
-  size: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-}>`
-  border-radius: 9999px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #cccccc;
-  color: black;
-  ${(props) => sizes[props.size]}
-  ${(props) => props.className}
-`;
+const Container = styled('div')(
+  css({
+    borderRadius: '9999px',
+    overflow: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#cccccc',
+    color: 'black',
+  }),
+  (props) => sizes[props.size],
+  (props) => props.sx
+)
 
-const Img = styled.img`
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-`;
+
+const Img = styled('img')(
+  css({
+    objectFit: 'cover',
+    width: '100%',
+    height: '100%',
+  })
+)
 
 function getInitials (name: string) {
   if(name) {
@@ -53,6 +57,7 @@ const Avatar = forwardRef<'div', AvatarProps>(
       name,
       src = '',
       size = 'md',
+      sx = {},
       alt,
       className = '',
       icon = <AvatarIcon />
@@ -62,11 +67,11 @@ const Avatar = forwardRef<'div', AvatarProps>(
 
     const fallback = useMemo(() => {
       return name ? (
-        <Container as={as} aria-label={alt || name} className={className} size={size}>
+        <Container as={as} aria-label={alt || name} size={size} sx={sx}>
           {initials}
         </Container>
       ) : (
-        <Container as={as} aria-label={alt || name} size={size} className={className}>
+        <Container as={as} aria-label={alt || name} size={size} sx={sx}>
           {icon}
         </Container>
       )
@@ -77,11 +82,19 @@ const Avatar = forwardRef<'div', AvatarProps>(
     }
 
     return (
-      <Container as={as} size={size} className={className}>
-        <Img src={src}  alt={alt || name} onError={() => setImgErrorLoad(true)}/>
+      <Container as={as} size={size} sx={sx}>
+        {
+          src ? (
+            <Img src={src}  alt={alt || name} onError={() => setImgErrorLoad(true)}/>
+          ) : (
+            fallback
+          )
+        }
       </Container>
     )
   }
 )
+
+Avatar.displayName = 'PixeluiAvatar'
 
 export default memo(Avatar);

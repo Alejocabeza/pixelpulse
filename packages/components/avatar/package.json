@@ -36,6 +36,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@styled-system/css": "^5.1.5",
+    "@types/styled-system__css": "^5.0.21",
     "clean-package": "^2.2.0",
     "pixelui-system": "workspace:*",
     "react": "^18.2.0",
