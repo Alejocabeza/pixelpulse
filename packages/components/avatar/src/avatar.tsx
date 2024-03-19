@@ -1,45 +1,57 @@
-'use client'
-import css from '@styled-system/css'
-import { forwardRef } from 'pixelui-system'
-import { memo, useMemo, useState } from 'react'
-import { AvatarProps } from 'src/avatarProps'
-import styled from 'styled-components'
-import { AvatarIcon } from './avatarIcon'
+import { memo, useMemo } from 'react';
+import styled from 'styled-components';
+import { AvatarIcon } from './avatarIcon';
+import { AvatarProps, SizeType } from './avatarType';
+import { Avatar, AvatarFallback, AvatarImage } from './components/ui/avatar';
+import './index.css';
 
-const sizes = {
-  '2xs': 'width: 2rem; height: 2rem;',
-  xs: 'width: 3rem; height: 3rem;',
-  sm: 'width: 4rem; height: 4rem;',
-  md: 'width: 5rem; height: 5rem;',
-  lg: 'width: 6rem; height: 6rem;',
-  xl: 'width: 7rem; height: 7rem;',
-  '2xl': 'width: 8rem; height: 8rem;',
-};
+const getSize = (size: SizeType|null|undefined): string => {
+  switch (size) {
+    case '2xs':
+      return 'width: 2rem; height: 2rem;';
+    case 'xs':
+      return 'width: 3rem; height: 3rem;';
+    case 'sm':
+      return 'width: 4rem; height: 4rem;';
+    case 'md':
+      return 'width: 5rem; height: 5rem;';
+    case 'lg':
+      return 'width: 6rem; height: 6rem;';
+    case 'xl':
+      return 'width: 7rem; height: 7rem;';
+    case '2xl':
+      return 'width: 8rem; height: 8rem;';
+    default:
+      return 'width: 5rem; height: 5rem;';
+  }
+}
 
-const Container = styled('div')(
-  css({
-    borderRadius: '9999px',
-    overflow: 'hidden',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#cccccc',
-    color: 'black',
-  }),
-  (props) => sizes[props.size],
-  (props) => props.sx
-)
+const Container = styled(Avatar)`
+  border-radius: 9999px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${props => props.bg ? `background-color: ${props.bg};` : 'background-color: #cccccc;' }
+  ${props => props.size}
+  ${props => props.sx}
+`
 
+const Img = styled(AvatarImage)`
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+`;
 
-const Img = styled('img')(
-  css({
-    objectFit: 'cover',
-    width: '100%',
-    height: '100%',
-  })
-)
+const Fallback = styled(AvatarFallback)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-function getInitials (name: string) {
+function getInitials (name: string|null|undefined) {
   if(name) {
     return name
       .split(' ')
@@ -49,52 +61,16 @@ function getInitials (name: string) {
   }
 };
 
-const Avatar = forwardRef<'div', AvatarProps>(
-    (props, ref) => {
-    const [imgErrorLoad, setImgErrorLoad] = useState(false)
-    const {
-      as = 'div',
-      name,
-      src = '',
-      size = 'md',
-      sx = {},
-      alt,
-      className = '',
-      icon = <AvatarIcon />
-    } = props;
+const AvatarComponent = (props:AvatarProps) => {
+  const initials = useMemo(() => getInitials(props.name), [props.name])
+  const sizes = useMemo(() => getSize(props.size), [props.size])
+  const icon = useMemo(() => props.icon || <AvatarIcon />, [props.icon])
+  return (
+    <Container size={sizes} bg={props.bg} sx={props.sx} className={`bg-slate-500 ${props.className || ''}`}>
+      <Img src={props.src} alt={props.alt || props.name} />
+      <Fallback>{initials || icon}</Fallback>
+    </Container>
+  )
+}
 
-    const initials = useMemo(() => getInitials(name), [name]);
-
-    const fallback = useMemo(() => {
-      return name ? (
-        <Container as={as} aria-label={alt || name} size={size} sx={sx}>
-          {initials}
-        </Container>
-      ) : (
-        <Container as={as} aria-label={alt || name} size={size} sx={sx}>
-          {icon}
-        </Container>
-      )
-    }, [name, imgErrorLoad, as, alt, className, icon, size])
-
-    if(imgErrorLoad) {
-      return fallback
-    }
-
-    return (
-      <Container as={as} size={size} sx={sx}>
-        {
-          src ? (
-            <Img src={src}  alt={alt || name} onError={() => setImgErrorLoad(true)}/>
-          ) : (
-            fallback
-          )
-        }
-      </Container>
-    )
-  }
-)
-
-Avatar.displayName = 'PixeluiAvatar'
-
-export default memo(Avatar);
+export default memo(AvatarComponent)

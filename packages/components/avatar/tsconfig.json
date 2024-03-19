@@ -5,11 +5,14 @@
     "paths": {
       "tailwind-variants": [
         "../../../node_modules/tailwind-variants"
+      ],
+      "@/*": [
+        "./src/*"
       ]
     },
   },
   "include": [
     "src",
-    "index.ts"
+    "src/index.ts"
   ]
 }

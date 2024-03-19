@@ -2,7 +2,7 @@
   "name": "pixelui-avatar",
   "version": "1.0.0",
   "description": "This is an avatar component",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "homepage": "https://github.com/Alejocabeza/pixelui",
   "sideEffects": false,
   "files": [
@@ -52,5 +52,14 @@
       "project": "./tsconfig.json"
     }
   },
-  "clean-package": "../../../clean-package.config.json"
+  "clean-package": "../../../clean-package.config.json",
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.359.0",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss-animate": "^1.0.7"
+  }
 }
