@@ -1,0 +1,50 @@
+{
+  "name": "pixelui-react",
+  "version": "1.0.0",
+  "description": "This is a react component for pixelui",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alejocabeza/pixelui",
+    "directory": "packages/core/react"
+  },
+  "bugs": {
+    "url": "https://github.com/Alejocabeza/pixelui/issues"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "dev": "pnpm build:fast --watch",
+    "typechecked": "tsc --noEmit",
+    "build:fast": "tsup src",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "keywords": [
+    "pixelui",
+    "core",
+    "react"
+  ],
+  "author": {
+    "name": "Alejocabeza",
+    "url": "https://github.com/Alejocabeza",
+    "email": "alejandrocabeza400@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "pixelui-system": "workspace:*",
+    "pixelui-avatar": "workspace:*"
+  },
+  "devDependencies": {
+    "clean-package": "^2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

@@ -2,15 +2,16 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar"
 import { forwardRef } from 'pixelui-system'
 import * as React from "react"
 
+import { AvatarProps } from "../../avatarType"
 import { cn } from "../../lib/utils"
 
 const Avatar = forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
+  'div',
+  AvatarProps
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Root
     ref={ref}
-    className={cn('bg-slate-500', className)}
+    className={cn(className)}
     {...props}
   />
 ))
