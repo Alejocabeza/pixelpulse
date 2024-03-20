@@ -1,7 +1,7 @@
 ---
 title: Avatar
 ---
-import { Avatar } from 'pixelui-avatar';
+import { Avatar } from 'pixelui-react';
 import Github from '../../src/icons/Github.tsx'
 import Npm from '../../src/icons/Npm.tsx'
 

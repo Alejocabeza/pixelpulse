@@ -4,7 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import { tailwindPlugin } from './plugins/tailwind-config';
 
 const config: Config = {
-  title: 'Pixel Pulse',
+  title: 'PixelUI',
   tagline: ' ',
   favicon: 'img/favicon.ico',
 
@@ -58,7 +58,7 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Pixel Pulse',
+      title: 'PixelUI',
       // logo: {
       //   alt: 'pixel pulse logo',
       //   src: '',

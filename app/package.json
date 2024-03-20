@@ -21,15 +21,15 @@
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "pixelui-react": "workspace:*"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.1.1",
     "@docusaurus/tsconfig": "3.1.1",
     "@docusaurus/types": "3.1.1",
     "tailwind": "^4.0.0",
-    "typescript": "~5.2.2",
-    "pixelui-avatar": "workspace:*"
+    "typescript": "~5.2.2"
   },
   "browserslist": {
     "production": [

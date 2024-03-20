@@ -75,6 +75,9 @@ importers:
       clsx:
         specifier: ^2.0.0
         version: 2.1.0
+      pixelui-react:
+        specifier: workspace:*
+        version: link:../packages/core/react
       prism-react-renderer:
         specifier: ^2.3.0
         version: 2.3.1(react@18.2.0)
@@ -94,9 +97,6 @@ importers:
       '@docusaurus/types':
         specifier: 3.1.1
         version: 3.1.1(esbuild@0.19.12)(react-dom@18.2.0)(react@18.2.0)
-      pixelui-avatar:
-        specifier: workspace:*
-        version: link:../packages/components/avatar
       tailwind:
         specifier: ^4.0.0
         version: 4.0.0
@@ -116,7 +116,7 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0
       clsx:
-        specifier: ^2.0.0
+        specifier: ^2.1.0
         version: 2.1.0
       lucide-react:
         specifier: ^0.359.0
@@ -149,6 +149,74 @@ importers:
       styled-components:
         specifier: ^6.1.8
         version: 6.1.8(react-dom@18.2.0)(react@18.2.0)
+
+  packages/components/button:
+    dependencies:
+      '@radix-ui/react-avatar':
+        specifier: ^1.0.4
+        version: 1.0.4(@types/react-dom@18.2.22)(@types/react@18.2.66)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-slot':
+        specifier: ^1.0.2
+        version: 1.0.2(@types/react@18.2.66)(react@18.2.0)
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
+      lucide-react:
+        specifier: ^0.359.0
+        version: 0.359.0(react@18.2.0)
+      tailwind-merge:
+        specifier: ^2.2.2
+        version: 2.2.2
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.1)
+    devDependencies:
+      '@styled-system/css':
+        specifier: ^5.1.5
+        version: 5.1.5
+      '@types/styled-system__css':
+        specifier: ^5.0.21
+        version: 5.0.21
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
+      pixelui-system:
+        specifier: workspace:*
+        version: link:../../core/system
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      styled-components:
+        specifier: ^6.1.8
+        version: 6.1.8(react-dom@18.2.0)(react@18.2.0)
+
+  packages/core/react:
+    dependencies:
+      pixelui-avatar:
+        specifier: workspace:*
+        version: link:../../components/avatar
+      pixelui-button:
+        specifier: workspace:*
+        version: link:../../components/button
+      pixelui-system:
+        specifier: workspace:*
+        version: link:../system
+    devDependencies:
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
 
   packages/core/system:
     devDependencies:
