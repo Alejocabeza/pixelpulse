@@ -1,19 +1,20 @@
 {
-  "name": "pixelui-react",
+  "name": "pixelui-button",
   "version": "1.0.0",
-  "description": "This is a react component for pixelui",
+  "description": "This is an button component",
   "main": "src/index.ts",
+  "homepage": "https://github.com/Alejocabeza/pixelui",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alejocabeza/pixelui",
-    "directory": "packages/core/react"
+    "url": "git+https://github.com/Alejocabeza/pixelui.git",
+    "directory": "packages/components/button"
   },
   "bugs": {
     "url": "https://github.com/Alejocabeza/pixelui/issues"
@@ -28,24 +29,30 @@
   },
   "keywords": [
     "pixelui",
-    "core",
-    "react"
+    "react",
+    "react-dom",
+    "button"
   ],
   "author": {
-    "name": "Alejocabeza",
-    "url": "https://github.com/Alejocabeza",
+    "name": "Alejandro Cabeza",
     "email": "alejandrocabeza400@gmail.com"
   },
   "license": "MIT",
   "dependencies": {
     "pixelui-system": "workspace:*",
-    "pixelui-avatar": "workspace:*",
-    "pixelui-button": "workspace:*"
-  },
-  "devDependencies": {
-    "clean-package": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "clean-package": "^2.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
   },
   "clean-package": "../../../clean-package.config.json"
 }
