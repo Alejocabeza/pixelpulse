@@ -11,11 +11,11 @@ const Avatar = forwardRef<'div', AvatarProps>((props, ref) => {
 
   const fallback = useMemo(() => {
     return (
-      <Component aria-label={alt || name} className={classes} role="img">
+      <span aria-label={alt || name} role="img">
         {name ? initials : icon || <UserIcon />}
-      </Component>
+      </span>
     );
-  }, [name, alt, classes, initials, icon]);
+  }, [name, alt, initials, icon]);
 
   const image = useMemo(() => (
       <Image
@@ -29,7 +29,7 @@ const Avatar = forwardRef<'div', AvatarProps>((props, ref) => {
 
   return (
     <Component aria-label={alt} className={classes} ref={ref} size={size} border={borderShow}>
-      {fallback}
+      {imageLoad ? null : fallback}
       {imageError ? null : image}
     </Component>
   )
