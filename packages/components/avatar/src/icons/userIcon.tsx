@@ -2,7 +2,6 @@
 export const UserIcon = ({width = 50, height = 50}: {width?: number, height?: number}) => {
   return (
     <svg
-      style={{color: '#00000050'}}
       xmlns="http://www.w3.org/2000/svg"
       width={`${width}`}
       height={`${height}`}

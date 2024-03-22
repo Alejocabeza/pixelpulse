@@ -1,12 +1,14 @@
 import { styled } from '@stitches/react'
 
-export const Container =  (as:any) => styled(as, {
+export const Container =  (as:any, sx = {}) => styled(as, {
   borderRadius: '9999px',
   overflow: 'hidden',
   backgroundColor: '#cccccc',
   display: 'flex',
+  color: '#00000050',
   justifyContent: 'center',
   alignItems: 'center',
+  ...sx,
   variants: {
     size: {
       '2xs': {
@@ -59,4 +61,13 @@ export const Image = styled('img', {
   width: '100%',
   height: '100%',
   objectFit: 'cover'
+})
+
+export const Fallback = styled('span', {
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontSize: '1.25rem',
 })

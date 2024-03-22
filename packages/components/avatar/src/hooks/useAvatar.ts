@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useMemo } from 'react';
 import { AvatarProps } from "../avatarProps";
-import { Container, Image } from '../avatarStyles';
+import { Container, Fallback, Image } from '../avatarStyles';
 
 function getInitials (name: string|null|undefined) {
   if(name) {
@@ -23,11 +23,12 @@ export const useAvatar = (props: AvatarProps) => {
     borderShow,
     icon,
     className,
+    sx = {},
   } = props
 
   const classes = useMemo(() => clsx(className), [className])
   const initials = useMemo(() => getInitials(name), [name])
-  const Component = useMemo(() => Container(as), [as])
+  const Component = useMemo(() => Container(as, sx), [as, sx])
 
   return {
     Component,
@@ -39,6 +40,7 @@ export const useAvatar = (props: AvatarProps) => {
     alt,
     src,
     icon,
-    initials
+    initials,
+    Fallback
   }
 }

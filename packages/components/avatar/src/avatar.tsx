@@ -7,13 +7,13 @@ import { UserIcon } from "./icons/userIcon";
 const Avatar = forwardRef<'div', AvatarProps>((props, ref) => {
   const [imageError, setImageError] = useState(false)
   const [imageLoad, setImageLoad] = useState(false)
-  const { Component, Image, size, classes, name, alt, src, borderShow, initials, icon } = useAvatar(props)
+  const { Component, Image, size, classes, name, alt, src, borderShow, initials, icon, Fallback } = useAvatar(props)
 
   const fallback = useMemo(() => {
     return (
-      <span aria-label={alt || name} role="img">
+      <Fallback aria-label={alt || name} role="img">
         {name ? initials : icon || <UserIcon />}
-      </span>
+      </Fallback>
     );
   }, [name, alt, initials, icon]);
 
