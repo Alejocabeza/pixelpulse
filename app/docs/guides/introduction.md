@@ -8,7 +8,7 @@ Innovación y accesibilidad unificadas para experiencias de usuario excepcionale
 
 ## What is PixelUi?
 
-Es una biblioteca de componentes para construir interfaces de usuario. Está construida sobre `shandcn`, un marco CSS altamente personalizable, y se apoya en `styled-components`, una biblioteca de JavaScript para estilizar componentes en `React`. Como un proyecto de código abierto, esta biblioteca permite a cualquiera usar, modificar y contribuir al código. Esto promueve la colaboración, mejora la calidad del código y acelera la innovación.
+Es una biblioteca de componentes para construir interfaces de usuario. Se apoya en librerias como `@stiches/react` y `clsx`, bibliotecas de JavaScript para estilizar componentes en `React`. Como un proyecto de código abierto, esta biblioteca permite a cualquiera usar, modificar y contribuir al código. Esto promueve la colaboración, mejora la calidad del código y acelera la innovación.
 
 ---
 

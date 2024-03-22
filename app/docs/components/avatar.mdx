@@ -2,8 +2,8 @@
 title: Avatar
 ---
 import { Avatar } from 'pixelui-react';
-import Github from '../../src/icons/Github.tsx'
-import Npm from '../../src/icons/Npm.tsx'
+import Github from '../../src/icons/Github.tsx';
+import Npm from '../../src/icons/Npm.tsx';
 
 # Avatar
 
@@ -39,7 +39,7 @@ import { Avatar } from "pixelui-avatar";
 <br/>
 
 <div className='flex flex-row gap-[1rem]'>
-    <Avatar name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+    <Avatar as='span' name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
     <Avatar name='Kola Tioluwani' src='https://bit.ly/tioluwani-kolawole' />
     <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
     <Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence' />
@@ -123,15 +123,15 @@ para customizar el manejo de errores:
 - Para actualizar los estilos de css del componente lo puedes hacer con la propiedad sx, `tailwind` aun no esta soportado
 
 <div className='flex flex-row gap-[1rem]'>
-  <Avatar icon={<Github />} bg="#2e2e2e" sx={{color:'white', border: '1px solid orange'}} />
-  <Avatar sx={{backgroundColor: "orange", color: 'white'}} />
+  <Avatar icon={<Github />} className='bg-red-500' />
+  <Avatar  />
 </div>
 
 <br/>
 
 ```jsx
 <div className="flex flex-row gap-[1rem]">
-  <Avatar icon={<Github />} bg="#2e2e2e" sx={{color:'white', border: '1px solid orange'}} />
-  <Avatar sx={{backgroundColor: "orange", color: 'white'}} />
+  <Avatar icon={<Github />}  />
+  <Avatar  />
 </div>
 ```
