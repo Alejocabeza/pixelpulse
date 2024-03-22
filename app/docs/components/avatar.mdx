@@ -123,15 +123,15 @@ para customizar el manejo de errores:
 - Para actualizar los estilos de css del componente lo puedes hacer con la propiedad sx, `tailwind` aun no esta soportado
 
 <div className='flex flex-row gap-[1rem]'>
-  <Avatar icon={<Github />} className='bg-red-500' />
-  <Avatar  />
+  <Avatar icon={<Github />}  sx={{backgroundColor: "red", color: "white"}}/>
+  <Avatar sx={{backgroundColor: 'green', color: 'white'}}  />
 </div>
 
 <br/>
 
 ```jsx
 <div className="flex flex-row gap-[1rem]">
-  <Avatar icon={<Github />}  />
-  <Avatar  />
+  <Avatar icon={<Github />}  sx={{backgroundColor: "red", color: "white"}}/>
+  <Avatar sx={{backgroundColor: 'green', color: 'white'}}  />
 </div>
 ```
