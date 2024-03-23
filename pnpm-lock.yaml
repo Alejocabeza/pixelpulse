@@ -186,6 +186,12 @@ importers:
 
   packages/components/button:
     dependencies:
+      '@stitches/react':
+        specifier: ^1.2.8
+        version: 1.2.8(react@18.2.0)
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
       pixelui-system:
         specifier: workspace:*
         version: link:../../core/system

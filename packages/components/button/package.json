@@ -39,6 +39,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@stitches/react": "^1.2.8",
+    "clsx": "^2.1.0",
     "pixelui-system": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
