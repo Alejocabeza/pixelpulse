@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef } from 'pixelui-system'
 import { memo, useMemo } from 'react'
 import { ButtonProps } from './buttonProps'

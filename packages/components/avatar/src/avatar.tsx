@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef } from "pixelui-system";
 import { memo, useMemo, useState } from "react";
 import { AvatarProps } from "./avatarProps";
