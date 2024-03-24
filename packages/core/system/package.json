@@ -1,6 +1,6 @@
 {
   "name": "pixelui-system",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is a system component for pixelui",
   "main": "src/index.ts",
   "files": [

@@ -1,4 +1,4 @@
-# pixel-ui
+# pixelui-system
 
 **PixelUI** system primitives, here you can find the `forwardRef`
 
