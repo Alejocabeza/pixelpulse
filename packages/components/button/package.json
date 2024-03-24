@@ -1,6 +1,6 @@
 {
   "name": "pixelui-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is an button component",
   "main": "src/index.ts",
   "homepage": "https://github.com/Alejocabeza/pixelui",
