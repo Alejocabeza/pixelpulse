@@ -38,7 +38,8 @@
   "dependencies": {
     "@stitches/react": "^1.2.8",
     "clsx": "^2.1.0",
-    "pixelui-system": "workspace:*"
+    "pixelui-system": "workspace:*",
+    "pixelui-hooks": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.2.0",

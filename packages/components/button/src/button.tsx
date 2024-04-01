@@ -29,4 +29,6 @@ const Button = forwardRef<'button', ButtonProps>((props, ref) => {
   )
 })
 
+Button.displayName = 'PixelUI Button'
+
 export default memo(Button)

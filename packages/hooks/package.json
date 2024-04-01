@@ -1,20 +1,19 @@
 {
-  "name": "pixelui-checkbox",
+  "name": "pixelui-hooks",
   "version": "1.0.0",
-  "description": "This is an checkbox component",
+  "description": "This is a hooks component for pixelui",
   "main": "src/index.ts",
-  "homepage": "https://github.com/Alejocabeza/pixelui",
-  "sideEffects": false,
   "files": [
     "dist"
   ],
   "publishConfig": {
     "access": "public"
   },
+  "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alejocabeza/pixelui.git",
-    "directory": "packages/components/checkbox"
+    "url": "git+https://github.com/Alejocabeza/pixelui",
+    "directory": "packages/hooks/hooks"
   },
   "bugs": {
     "url": "https://github.com/Alejocabeza/pixelui/issues"
@@ -29,21 +28,23 @@
   },
   "keywords": [
     "pixelui",
+    "hooks",
     "react",
-    "react-dom",
-    "checkbox"
+    "useDomRef"
   ],
   "author": {
-    "name": "Alejandro Cabeza",
+    "name": "Alejocabeza",
+    "url": "https://github.com/Alejocabeza",
     "email": "alejandrocabeza400@gmail.com"
   },
   "license": "MIT",
   "dependencies": {
-    "@stitches/react": "^1.2.8",
-    "clsx": "^2.1.0",
-    "framer-motion": "^11.0.20",
     "pixelui-system": "workspace:*",
-    "pixelui-hooks": "workspace:*",
+    "pixelui-avatar": "workspace:*",
+    "pixelui-button": "workspace:*",
+    "pixelui-checkbox": "workspace:*"
+  },
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -51,9 +52,7 @@
     "clean-package": "^2.2.0"
   },
   "eslintConfig": {
-    "extends": [
-      "standard"
-    ],
+    "extends": ["standard"],
     "parserOptions": {
       "project": "./tsconfig.json"
     }

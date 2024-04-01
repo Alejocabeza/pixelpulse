@@ -4,7 +4,7 @@ import { ButtonProps } from "src/buttonProps"
 import { Button } from "../buttonStyles"
 
 export const useButton = (porps: ButtonProps) => {
-  const { variant, size, color, radius, loading, sx, as, disabled, className, positionIcon, spinner, isOnlyIcon, icon } = porps
+  const { variant, size, color, radius, loading, sx, as, disabled, className, positionIcon, spinner, isOnlyIcon, icon} = porps
   const classes = useMemo(() => clsx(className), [className])
   const Component = useMemo(() => Button(as, sx), [as, sx])
   const isDisabled = disabled || loading
@@ -20,6 +20,6 @@ export const useButton = (porps: ButtonProps) => {
     spinner,
     positionIcon,
     icon,
-    loading
+    loading,
   }
 }

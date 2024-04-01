@@ -1,20 +1,40 @@
-import React from "react"
+import React from "react";
 
 export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   /**
    * @description this is the html tag
    */
-  as?: string
+  as?: string;
   /**
    * @description this is the title
    */
-  title?: string
+  title?: string;
   /**
-   * @description this is the Ref of Container
+   * @description this is the icon
    */
-  ref?: React.RefAttributes<HTMLDivElement>
+  icon?: JSX.Element | React.ReactElement | undefined;
   /**
-   * @description this is the ref of Input type Checkbox
+   * @description this is the isChecked
    */
-  refInput?: React.RefAttributes<HTMLInputElement>
+  isChecked?: boolean;
+  /**
+   * @description this is the disabled
+   */
+  disabled?: boolean;
+  /**
+   * @description this is the size
+   */
+  size?: "sm" | "md" | "lg";
+  /**
+   * @description this is the color
+   */
+  color?: "primary" | "secondary" | "success" | "warning" | "danger" | "default";
+  /**
+   * @description this is the raidus
+   */
+  radius?: "full" | "lg" | "md" | "sm" | "none";
+  /**
+   * @description this is the indeterminate
+   */
+  isIndeterminate?: boolean;
 }
