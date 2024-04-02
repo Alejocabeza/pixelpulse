@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface CheckboxProps {
   /**
    * @description this is the html tag
    */
@@ -24,17 +24,21 @@ export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElemen
   /**
    * @description this is the size
    */
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg"
   /**
    * @description this is the color
    */
   color?: "primary" | "secondary" | "success" | "warning" | "danger" | "default";
   /**
-   * @description this is the raidus
+   * @description this is the radius
    */
   radius?: "full" | "lg" | "md" | "sm" | "none";
   /**
    * @description this is the indeterminate
    */
   isIndeterminate?: boolean;
+  /**
+   * @description this is the children
+   */
+  children?: React.ReactNode;
 }

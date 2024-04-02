@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef } from "pixelui-system";
 import React, { ReactElement, memo, useMemo } from "react";
 import { CheckboxProps } from "./checkboxProps";
