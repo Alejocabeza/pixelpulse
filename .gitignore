@@ -5,6 +5,7 @@
 node_modules
 /.pnp
 .pnp.js
+/pnpm-lock.yaml
 
 # testing
 /coverage
@@ -51,7 +52,6 @@ examples/**/out
 examples/**/.next
 packages/**/*.backup
 packages/**/*.backup.ts
-
 .vercel
 
 # ignore sitemap
