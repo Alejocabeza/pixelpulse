@@ -17,15 +17,15 @@ const sidebars: SidebarsConfig = {
       label: 'Guides',
       items: ['guides/introduction', "guides/installation"],
     },
-    {
-      type: 'category',
-      label: 'Frameworks',
-      items: ['frameworks/next', 'frameworks/react'],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Frameworks',
+    //   items: ['frameworks/next', 'frameworks/react'],
+    // },
     {
       type: 'category',
       label: 'Componentes',
-      items: ['components/avatar', "components/button"],
+      items: ['components/avatar', "components/button", "components/checkbox"],
     }
   ]
 

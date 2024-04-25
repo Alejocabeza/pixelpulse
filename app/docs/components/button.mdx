@@ -1,0 +1,240 @@
+---
+title: Button
+---
+
+import { Button } from 'pixelui-react';
+import Github from '../../src/icons/Github.tsx';
+import Npm from '../../src/icons/Npm.tsx';
+
+# Button
+
+El componente Button se utiliza para crear botones interactivos que permiten al usuario realizar acciones
+
+<div className='flex flex-row justify-start gap-[1rem]'>
+  <a
+    className='
+      flex justify-center items-center
+      gap-[.8rem] px-[.8rem] py-[.4rem]
+      border border-sky-500 text-black bg-[#cccccc40] hover:bg-[#cccccc] cursor-pointer
+      rounded-sm dark:text-white'
+      href='https://github.com/Alejocabeza/pixelpulse/pacakges/components/button'
+      target='_blank'
+  > <Github /> Source</a>
+  <a
+    className='flex justify-center items-center
+      gap-[.8rem] px-[.8rem] py-[.4rem]
+      border border-sky-500 text-black bg-[#cccccc40] hover:bg-[#cccccc] cursor-pointer
+      rounded-sm dark:text-white'
+  ><Npm className='bg-red-500' /> pixelui-button</a>
+</div>
+## Importación
+
+PixelUI exporta solamente un modelo de Button:
+
+```jsx
+import { Button } from "pixelui-react";
+```
+
+## Uso
+<br/>
+<Button color='primary'>Button</Button>
+<br/>
+<br/>
+```jsx
+import React from 'react'
+import {Button} from 'pixelui-react'
+
+export default function App() {
+  return (
+    <>
+      <Button color="primary">Button</Button>
+    </>
+  )
+}
+```
+
+### Desabilitar
+<br/>
+<Button color="primary" disabled>Button</Button>
+<br/>
+<br/>
+```jsx
+import React from 'react'
+import {Button} from 'pixelui-react'
+
+export default function App() {
+  return (
+    <>
+      <Button color="primary" disabled>Button</Button>
+    </>
+  )
+}
+```
+
+### Tamaños
+<br/>
+<div className='flex justify-start items-center gap-[1rem]'>
+  <Button size='small' >Small</Button>
+  <Button size='medium' >Medium</Button>
+  <Button size='large' >Large</Button>
+</div>
+<br/>
+
+```jsx
+import React from 'react'
+import {Button} from 'pixelui-react'
+
+export default function App() {
+  return (
+    <>
+      <Button size='small' >Button</Button>
+      <Button size='medium' >Button</Button>
+      <Button size='large' >Button</Button>
+    </>
+  )
+}
+```
+
+### Radius
+<br/>
+<div className='flex justify-start items-center gap-[1rem]'>
+  <Button radius='full' >Full</Button>
+  <Button radius='large' >Large</Button>
+  <Button radius='medium' >Medium</Button>
+  <Button radius='small' >Small</Button>
+  <Button radius='none' >None</Button>
+</div>
+<br/>
+
+```jsx
+import React from 'react'
+import {Button} from 'pixelui-react'
+
+export default function App() {
+  return (
+    <>
+      <Button radius='full' >Full</Button>
+      <Button radius='large' >Large</Button>
+      <Button radius='medium' >Medium</Button>
+      <Button radius='small' >Small</Button>
+      <Button radius='none' >None</Button>
+    </>
+  )
+}
+```
+
+### Colors
+<br/>
+<div className='flex justify-start items-center gap-[1rem]'>
+  <Button color='default' >Default</Button>
+  <Button color='primary' >Primary</Button>
+  <Button color='secondary' >Secondary</Button>
+  <Button color='success' >Success</Button>
+  <Button color='warning' >Warning</Button>
+  <Button color='danger' >Danger</Button>
+</div>
+<br/>
+```jsx
+import React from 'react'
+import {Button} from 'pixelui-react'
+
+export default function App() {
+  return (
+    <>
+      <Button color='default' >Default</Button>
+      <Button color='primary' >Primary</Button>
+      <Button color='secondary' >Secondary</Button>
+      <Button color='success' >Success</Button>
+      <Button color='warning' >Warning</Button>
+      <Button color='danger' >Danger</Button>
+    </>
+  )
+}
+```
+
+{/* ### Variantes
+<br/>
+<div className='flex justify-start items-center gap-[1rem]'>
+      <Button color="primary" variant="solid">Solid</Button>
+      <Button color="primary" variant="faded"> Faded </Button>
+      <Button color="primary" variant="bordered"> Bordered </Button>
+      <Button color="primary" variant="light"> Light </Button>
+      <Button color="primary" variant="flat"> Flat </Button>
+      <Button color="primary" variant="ghost"> Ghost </Button>
+      <Button color="primary" variant="shadow"> Shadow </Button>
+</div>
+<br/>
+```jsx
+import React from 'react'
+import {Button} from 'pixelui-react'
+
+export default function App() {
+  return (
+    <>
+      <Button color="primary" variant="solid">Solid</Button>
+      <Button color="primary" variant="faded"> Faded </Button>
+      <Button color="primary" variant="bordered"> Bordered </Button>
+      <Button color="primary" variant="light"> Light </Button>
+      <Button color="primary" variant="flat"> Flat </Button>
+      <Button color="primary" variant="ghost"> Ghost </Button>
+      <Button color="primary" variant="shadow"> Shadow </Button>
+    </>
+  )
+}
+``` */}
+### Cargando
+<br/>
+<div className='flex justify-start items-center gap-[1rem]'>
+      <Button color="primary" loading>Loading</Button>
+</div>
+<br/>
+```jsx
+import React from 'react'
+import {Button} from 'pixelui-react'
+
+export default function App() {
+  return (
+    <>
+      <Button color="primary" loading>Loading</Button>
+    </>
+  )
+}
+```
+### Con Iconos
+<br/>
+<div className='flex justify-start items-center gap-[1rem]'>
+  <Button color="primary" positionIcon='start' icon={<Github />}>Github</Button>
+  <Button color="primary" positionIcon='end' icon={<Github />}>Github</Button>
+</div>
+<br/>
+```jsx
+import React from 'react'
+import {Button} from 'pixelui-react'
+
+export default function App() {
+  return (
+    <>
+      <Button color="primary" positionIcon='start' icon={<Github />}>Github</Button>
+      <Button color="primary" positionIcon='end' icon={<Github />}>Github</Button>
+    </>
+  )
+}
+```
+### Solo Iconos
+<br/>
+<div className='flex justify-start items-center gap-[1rem]'>
+  <Button color="primary" isOnlyIcon icon={<Github />}>Github</Button>
+</div>
+<br/>
+```jsx
+import React from 'react'
+import {Button} from 'pixelui-react'
+
+export default function App() {
+  return (
+    <>
+      <Button color="primary" isOnlyIcon icon={<Github />}>Github</Button>
+    </>
+  )
+}
+```

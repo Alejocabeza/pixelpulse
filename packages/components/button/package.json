@@ -1,19 +1,20 @@
 {
-  "name": "pixelui-react",
-  "version": "1.0.0",
-  "description": "This is a react component for pixelui",
+  "name": "pixelui-button",
+  "version": "1.0.1",
+  "description": "This is an button component",
   "main": "src/index.ts",
+  "homepage": "https://github.com/Alejocabeza/pixelui",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alejocabeza/pixelui",
-    "directory": "packages/core/react"
+    "url": "git+https://github.com/Alejocabeza/pixelui.git",
+    "directory": "packages/components/button"
   },
   "bugs": {
     "url": "https://github.com/Alejocabeza/pixelui/issues"
@@ -28,25 +29,33 @@
   },
   "keywords": [
     "pixelui",
-    "core",
-    "react"
+    "react",
+    "react-dom",
+    "button"
   ],
   "author": {
-    "name": "Alejocabeza",
-    "url": "https://github.com/Alejocabeza",
+    "name": "Alejandro Cabeza",
     "email": "alejandrocabeza400@gmail.com"
   },
   "license": "MIT",
   "dependencies": {
+    "@stitches/react": "^1.2.8",
+    "clsx": "^2.1.0",
     "pixelui-system": "workspace:*",
-    "pixelui-avatar": "workspace:*",
-    "pixelui-button": "workspace:*",
-    "pixelui-checkbox": "workspace:*"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "pixelui-hooks": "workspace:*"
   },
   "devDependencies": {
-    "clean-package": "^2.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "clean-package": "^2.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
   },
   "clean-package": "../../../clean-package.config.json"
 }

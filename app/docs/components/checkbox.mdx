@@ -1,0 +1,206 @@
+---
+title: "Checkbox"
+---
+
+import Github from '../../src/icons/Github.tsx';
+import Npm from '../../src/icons/Npm.tsx';
+import { Checkbox } from 'pixelui-react'
+import { CheckIcon } from '../../src/icons/CheckIcon.tsx'
+import { FaHeart } from "react-icons/fa";
+import { FaCirclePlus } from "react-icons/fa6";
+
+
+# Checkbox
+
+This component is used for get data boolean from user
+
+<div className='flex flex-row justify-start gap-[1rem]'>
+  <a
+    className='
+      flex justify-center items-center
+      gap-[.8rem] px-[.8rem] py-[.4rem]
+      border border-sky-500 text-black bg-[#cccccc40] hover:bg-[#cccccc] cursor-pointer
+      rounded-sm dark:text-white'
+      href='https://github.com/Alejocabeza/pixelpulse/pacakges/components/checkbox'
+      target='_blank'
+  > <Github /> Source</a>
+  <a
+    className='flex justify-center items-center
+      gap-[.8rem] px-[.8rem] py-[.4rem]
+      border border-sky-500 text-black bg-[#cccccc40] hover:bg-[#cccccc] cursor-pointer
+      rounded-sm dark:text-white'
+  ><Npm className='bg-red-500' /> pixelui-checkbox</a>
+</div>
+<br/>
+## Importación
+
+PixelUI exporta solamente un modelo de Checkbox:
+
+```jsx
+import { Checkbox } from "pixelui-react";
+```
+
+## Uso
+<br/>
+<div className='flex flex-row gap-[1rem]'>
+  <Checkbox title='option' />
+</div>
+<br/>
+
+```jsx
+import react from 'react'
+import { Checkbox } from "pixelui-react";
+
+export const App = () => {
+  return (
+    <div className='flex flex-row gap-[1rem]'>
+      <Checkbox title='option' />
+    </div>
+  )
+}
+```
+
+## Inhabilitado
+<br/>
+<div className='flex flex-row gap-[1rem]'>
+  <Checkbox title='option' disabled />
+  <Checkbox title='option' disabled isChecked />
+</div>
+<br/>
+
+```jsx
+import react from 'react'
+import { Checkbox } from "pixelui-react";
+
+export const App = () => {
+  return (
+    <div className='flex flex-row gap-[1rem]'>
+      <Checkbox title='option' disabled />
+      <Checkbox title='option' disabled isChecked />
+    </div>
+  )
+}
+```
+
+## Tamaños
+<br/>
+<div className='flex flex-row gap-[1rem]'>
+  <Checkbox title='Small' isChecked size='sm' />
+  <Checkbox title='Medium' isChecked size='md' />
+  <Checkbox title='Large' isChecked size='lg'/>
+</div>
+<br/>
+
+```jsx
+import react from 'react'
+import { Checkbox } from "pixelui-react";
+
+export const App = () => {
+  return (
+    <div className='flex flex-row gap-[1rem]'>
+      <Checkbox title='Small' isChecked size='sm' />
+      <Checkbox title='Medium' isChecked size='md' />
+      <Checkbox title='Large' isChecked size='lg'/>
+    </div>
+  )
+}
+```
+## Colores
+<br/>
+<div className='flex flex-row gap-[1rem]'>
+  <Checkbox title='Default' isChecked color='default' />
+  <Checkbox title='Primary' isChecked color='primary' />
+  <Checkbox title='Secondary' isChecked color='secondary' />
+  <Checkbox title='Success' isChecked color='success' />
+  <Checkbox title='Warning' isChecked color='warning' />
+  <Checkbox title='Danger' isChecked color='danger' />
+</div>
+<br/>
+
+```jsx
+import react from 'react'
+import { Checkbox } from "pixelui-react";
+
+export const App = () => {
+  return (
+    <div className='flex flex-row gap-[1rem]'>
+      <Checkbox title='Default' isChecked color='default' />
+      <Checkbox title='Primary' isChecked color='primary' />
+      <Checkbox title='Secondary' isChecked color='secondary' />
+      <Checkbox title='Success' isChecked color='success' />
+      <Checkbox title='Warning' isChecked color='warning' />
+      <Checkbox title='Danger' isChecked color='danger' />
+    </div>
+  )
+}
+```
+
+## Radius
+<br/>
+<div className='flex flex-row gap-[1rem]'>
+    <Checkbox isChecked radius="full">Full</Checkbox>
+    <Checkbox isChecked radius="lg">Large</Checkbox>
+    <Checkbox isChecked radius="md">Medium</Checkbox>
+    <Checkbox isChecked radius="sm">Small</Checkbox>
+    <Checkbox isChecked radius="none">None</Checkbox>
+</div>
+<br/>
+
+```jsx
+import react from 'react'
+import { Checkbox } from "pixelui-react";
+
+export const App = () => {
+  return (
+    <div className='flex flex-row gap-[1rem]'>
+      <Checkbox isChecked radius="full">Full</Checkbox>
+      <Checkbox isChecked radius="lg">Large</Checkbox>
+      <Checkbox isChecked radius="md">Medium</Checkbox>
+      <Checkbox isChecked radius="sm">Small</Checkbox>
+      <Checkbox isChecked radius="none">None</Checkbox>
+    </div>
+  )
+}
+```
+
+## Indeterminado
+<br/>
+<div className='flex flex-row gap-[1rem]'>
+  <Checkbox isIndeterminate isChecked>Option</Checkbox>
+</div>
+<br/>
+
+```jsx
+import react from 'react'
+import { Checkbox } from "pixelui-react";
+
+export const App = () => {
+  return (
+    <div className='flex flex-row gap-[1rem]'>
+      <Checkbox isIndeterminate isChecked>Option</Checkbox>
+    </div>
+  )
+}
+```
+
+## Icono Personalizado
+<br/>
+<div className='flex flex-row gap-[1rem]'>
+  <Checkbox isChecked icon={<FaHeart/>}>Option</Checkbox>
+  <Checkbox isChecked icon={<FaCirclePlus/>} color="warning">Option</Checkbox>
+</div>
+<br/>
+
+```jsx
+import react from 'react'
+import { Checkbox } from "pixelui-react";
+
+export const App = () => {
+  return (
+    <div className='flex flex-row gap-[1rem]'>
+      <Checkbox isChecked icon={<FaHeart/>}>Option</Checkbox>
+      <Checkbox isChecked icon={<FaCirclePlus/>} color="warning">Option</Checkbox>
+    </div>
+  )
+}
+```

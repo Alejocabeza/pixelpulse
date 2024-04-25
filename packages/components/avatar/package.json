@@ -35,31 +35,26 @@
     "email": "alejandrocabeza400@gmail.com"
   },
   "license": "MIT",
-  "devDependencies": {
-    "@styled-system/css": "^5.1.5",
-    "@types/styled-system__css": "^5.0.21",
-    "clean-package": "^2.2.0",
+  "dependencies": {
+    "@stitches/react": "^1.2.8",
+    "clsx": "^2.1.0",
     "pixelui-system": "workspace:*",
+    "pixelui-hooks": "workspace:*"
+  },
+  "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^6.1.8"
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "clean-package": "^2.2.0"
   },
   "eslintConfig": {
     "extends": [
-      "../../../.eslintrc.json"
+      "standard"
     ],
     "parserOptions": {
       "project": "./tsconfig.json"
     }
   },
-  "clean-package": "../../../clean-package.config.json",
-  "dependencies": {
-    "@radix-ui/react-avatar": "^1.0.4",
-    "@radix-ui/react-slot": "^1.0.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
-    "lucide-react": "^0.359.0",
-    "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7"
-  }
+  "clean-package": "../../../clean-package.config.json"
 }
