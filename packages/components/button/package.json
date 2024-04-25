@@ -1,7 +1,7 @@
 {
-  "name": "pixelui-avatar",
-  "version": "2.0.0",
-  "description": "This is an avatar component",
+  "name": "pixelui-button",
+  "version": "1.0.0",
+  "description": "This is an button component",
   "main": "src/index.ts",
   "homepage": "https://github.com/Alejocabeza/pixelui",
   "sideEffects": false,
@@ -14,7 +14,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Alejocabeza/pixelui.git",
-    "directory": "packages/components/avatar"
+    "directory": "packages/components/button"
   },
   "bugs": {
     "url": "https://github.com/Alejocabeza/pixelui/issues"
@@ -28,7 +28,10 @@
     "postpack": "clean-package restore"
   },
   "keywords": [
-    "avatar"
+    "pixelui",
+    "react",
+    "react-dom",
+    "button"
   ],
   "author": {
     "name": "Alejandro Cabeza",
@@ -38,9 +41,7 @@
   "dependencies": {
     "@stitches/react": "^1.2.8",
     "clsx": "^2.1.0",
-    "pixelui-system": "workspace:*"
-  },
-  "peerDependencies": {
+    "pixelui-system": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

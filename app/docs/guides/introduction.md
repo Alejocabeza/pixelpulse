@@ -4,21 +4,21 @@ title: "Introducción"
 
 # Introduction
 
-Unified innovation and accessibility for exceptional user experiences. Discover the magic of design made simple! 🎨
+Innovación y accesibilidad unificadas para experiencias de usuario excepcionales. ¡Descubre la magia del diseño simplificado! 🎨
 
-## What is Pixel Pulse?
+## What is PixelUi?
 
-is a library of components for creating user interfaces. It is built on Tailwind, a highly customizable CSS framework, and is optimized for React, a JavaScript library for building user interfaces.
-As an open source project, Pixel Pulse allows anyone to use, modify, and contribute to the code. This encourages collaboration, improves code quality, and accelerates innovation.
+Es una biblioteca de componentes para construir interfaces de usuario. Se apoya en librerias como `@stiches/react` y `clsx`, bibliotecas de JavaScript para estilizar componentes en `React`. Como un proyecto de código abierto, esta biblioteca permite a cualquiera usar, modificar y contribuir al código. Esto promueve la colaboración, mejora la calidad del código y acelera la innovación.
 
 ---
 
 ## Community
 
-Our community is the heart of our Design System. Here, every idea counts and every contribution matters.
-Whether you're an experienced designer, a passionate developer, or just someone who loves to learn, your voice can make a difference. Share your ideas, learn from others, and help shape the future of Pixel Pulse.
-No matter what your skill level or experience, there is a place for you in our community.
+Nuestra comunidad es el corazón de nuestro Sistema de Diseño. Aquí cada idea cuenta y cada contribución cuenta.
+Si eres un diseñador experimentado, un desarrollador apasionado o simplemente alguien a quien le encanta aprender,
+tu voz puede marcar la diferencia. Comparte tus ideas, aprende de otros y ayuda a dar forma al futuro de PixelUi.
+No importa cuál sea su nivel de habilidad o experiencia, hay un lugar para usted en nuestra comunidad.
 
 ## Contributing
 
-Aporta tu creatividad y habilidades para ayudar a mejorar nuestro Sistema de Diseño. Recuerda, cada idea cuenta y cada mejora suma. ¡Sigue nuestras reglas de contribución y juntos haremos de Pixel Pulse algo aún mejor! 🚀
+Aporta tu creatividad y habilidades para ayudar a mejorar nuestro Sistema de Diseño. Recuerda, cada idea cuenta y cada mejora suma. ¡Sigue nuestras reglas de contribución y juntos haremos de PixelUI algo aún mejor! 🚀

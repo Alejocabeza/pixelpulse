@@ -19,6 +19,7 @@
     "@docusaurus/preset-classic": "3.1.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
+    "pixelui-react": "workspace:*",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
@@ -27,9 +28,9 @@
     "@docusaurus/module-type-aliases": "3.1.1",
     "@docusaurus/tsconfig": "3.1.1",
     "@docusaurus/types": "3.1.1",
-    "tailwind": "^4.0.0",
-    "typescript": "~5.2.2",
-    "pixelui-avatar": "workspace:*"
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "~5.2.2"
   },
   "browserslist": {
     "production": [
