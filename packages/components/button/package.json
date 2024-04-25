@@ -1,6 +1,6 @@
 {
   "name": "pixelui-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is an button component",
   "main": "src/index.ts",
   "homepage": "https://github.com/Alejocabeza/pixelui",
@@ -43,7 +43,8 @@
     "clsx": "^2.1.0",
     "pixelui-system": "workspace:*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "pixelui-hooks": "workspace:*"
   },
   "devDependencies": {
     "clean-package": "^2.2.0"

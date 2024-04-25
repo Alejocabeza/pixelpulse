@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef } from 'pixelui-system'
 import { memo, useMemo } from 'react'
 import { ButtonProps } from './buttonProps'
@@ -27,5 +28,7 @@ const Button = forwardRef<'button', ButtonProps>((props, ref) => {
     </Component>
   )
 })
+
+Button.displayName = 'PixelUI Button'
 
 export default memo(Button)

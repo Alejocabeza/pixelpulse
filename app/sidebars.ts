@@ -25,7 +25,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Componentes',
-      items: ['components/avatar', "components/button"],
+      items: ['components/avatar', "components/button", "components/checkbox"],
     }
   ]
 
