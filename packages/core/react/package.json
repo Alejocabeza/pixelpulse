@@ -41,7 +41,8 @@
     "pixelui-system": "workspace:*",
     "pixelui-avatar": "workspace:*",
     "pixelui-button": "workspace:*",
-    "pixelui-checkbox": "workspace:*"
+    "pixelui-checkbox": "workspace:*",
+    "pixelui-tooltip": "workspace:*"
   },
   "devDependencies": {
     "clean-package": "^2.2.0",

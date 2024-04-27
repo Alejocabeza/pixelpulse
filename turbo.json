@@ -1,10 +1,17 @@
 {
   "$schema": "https//turbo.build/schema.json",
-  "baseBranch": "origin/main",
   "globalDependencies": ["tsconfig.json"],
   "pipeline": {
     "dev": {
       "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".dicosaurus/**", "dist/**"]
+    },
+    "build:fast": {
+      "dependsOn": ["^build:fast"],
+      "outputs": ["dist/**"]
     }
   }
 }

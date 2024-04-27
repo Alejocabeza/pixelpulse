@@ -2,31 +2,14 @@
 title: Avatar
 ---
 import { Avatar } from 'pixelui-react';
-import Github from '../../src/icons/Github.tsx';
-import Npm from '../../src/icons/Npm.tsx';
+import { HeaderMdx } from '../../src/componets/header-mdx.tsx'
 
-# Avatar
 
-El componente Avatar es usado para representar a un usuario y mostrar la imagen de perfil, iniciales
-or un icono.
+<HeaderMdx 
+title='Avatar' 
+description="El componente Avatar es usado para representar a un usuario y mostrar la imagen de perfil, Iniciales o un Icono." 
+/>
 
-<div className='flex flex-row justify-start gap-[1rem]'>
-  <a
-    className='
-      flex justify-center items-center
-      gap-[.8rem] px-[.8rem] py-[.4rem]
-      border border-sky-500 text-black bg-[#cccccc40] hover:bg-[#cccccc] cursor-pointer
-      rounded-sm dark:text-white'
-      href='https://github.com/Alejocabeza/pixelpulse/pacakges/components/avatar'
-      target='_blank'
-  > <Github /> Source</a>
-  <a
-    className='flex justify-center items-center
-      gap-[.8rem] px-[.8rem] py-[.4rem]
-      border border-sky-500 text-black bg-[#cccccc40] hover:bg-[#cccccc] cursor-pointer
-      rounded-sm dark:text-white'
-  ><Npm className='bg-red-500' /> pixelui-avatar</a>
-</div>
 ## Importación
 
 PixelUI exporta solamente un modelo de Avatar:
@@ -144,7 +127,9 @@ para customizar el manejo de errores:
 - Para actualizar los estilos de css del componente lo puedes hacer con la propiedad sx, `tailwind` aun no esta soportado
 
 <div className='flex flex-row gap-[1rem]'>
-  <Avatar icon={<Github />}  sx={{backgroundColor: "red", color: "white"}}/>
+  <Avatar icon={
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+  }  sx={{backgroundColor: "red", color: "white"}}/>
   <Avatar sx={{backgroundColor: 'green', color: 'white'}}  />
 </div>
 
@@ -157,7 +142,7 @@ import { Avatar } from "pixelui-react";
 export const App = () => {
   return (
     <div className='flex flex-row gap-[1rem]'>
-      <Avatar icon={<Github />}  sx={{backgroundColor: "red", color: "white"}}/>
+      <Avatar icon={<UserGroup/>} sx={{backgroundColor: "red", color: "white"}}/>
       <Avatar sx={{backgroundColor: 'green', color: 'white'}}  />
     </div>
   )

@@ -3,30 +3,10 @@ title: Button
 ---
 
 import { Button } from 'pixelui-react';
-import Github from '../../src/icons/Github.tsx';
-import Npm from '../../src/icons/Npm.tsx';
+import {HeaderMdx} from '../../src/componets/header-mdx.tsx'
 
-# Button
+<HeaderMdx title='Button' description='El componente Button se utiliza para crear botones interactivos que permiten al usuario realizar acciones'/>
 
-El componente Button se utiliza para crear botones interactivos que permiten al usuario realizar acciones
-
-<div className='flex flex-row justify-start gap-[1rem]'>
-  <a
-    className='
-      flex justify-center items-center
-      gap-[.8rem] px-[.8rem] py-[.4rem]
-      border border-sky-500 text-black bg-[#cccccc40] hover:bg-[#cccccc] cursor-pointer
-      rounded-sm dark:text-white'
-      href='https://github.com/Alejocabeza/pixelpulse/pacakges/components/button'
-      target='_blank'
-  > <Github /> Source</a>
-  <a
-    className='flex justify-center items-center
-      gap-[.8rem] px-[.8rem] py-[.4rem]
-      border border-sky-500 text-black bg-[#cccccc40] hover:bg-[#cccccc] cursor-pointer
-      rounded-sm dark:text-white'
-  ><Npm className='bg-red-500' /> pixelui-button</a>
-</div>
 ## Importación
 
 PixelUI exporta solamente un modelo de Button:
@@ -203,8 +183,8 @@ export default function App() {
 ### Con Iconos
 <br/>
 <div className='flex justify-start items-center gap-[1rem]'>
-  <Button color="primary" positionIcon='start' icon={<Github />}>Github</Button>
-  <Button color="primary" positionIcon='end' icon={<Github />}>Github</Button>
+  <Button color="primary" positionIcon='start' icon={<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-alert-square-rounded"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" /><path d="M12 8v4" /><path d="M12 16h.01" /></svg>}>Info</Button>
+  <Button color="primary" positionIcon='end' icon={<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-alert-square-rounded"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" /><path d="M12 8v4" /><path d="M12 16h.01" /></svg>}>Info</Button>
 </div>
 <br/>
 ```jsx
@@ -214,8 +194,8 @@ import {Button} from 'pixelui-react'
 export default function App() {
   return (
     <>
-      <Button color="primary" positionIcon='start' icon={<Github />}>Github</Button>
-      <Button color="primary" positionIcon='end' icon={<Github />}>Github</Button>
+      <Button color="primary" positionIcon='start' icon={<IconInfo />}>Info</Button>
+      <Button color="primary" positionIcon='end' icon={<IconInfo />}>Info</Button>
     </>
   )
 }
@@ -223,7 +203,7 @@ export default function App() {
 ### Solo Iconos
 <br/>
 <div className='flex justify-start items-center gap-[1rem]'>
-  <Button color="primary" isOnlyIcon icon={<Github />}>Github</Button>
+  <Button color="primary" isOnlyIcon icon={<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-alert-square-rounded"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" /><path d="M12 8v4" /><path d="M12 16h.01" /></svg>}>Info</Button>
 </div>
 <br/>
 ```jsx
@@ -233,7 +213,7 @@ import {Button} from 'pixelui-react'
 export default function App() {
   return (
     <>
-      <Button color="primary" isOnlyIcon icon={<Github />}>Github</Button>
+      <Button color="primary" isOnlyIcon icon={<IconInfo />}>Info</Button>
     </>
   )
 }
